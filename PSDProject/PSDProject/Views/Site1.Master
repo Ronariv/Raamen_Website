@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site1.Master.cs" Inherits="PSDProject.Site1" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css"/>
+
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" class="form-control p-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
+            <h1 class="navbar-brand">Raamen</h1>
+            <div class="container-fluid">
+                <div class="navbar-nav">
+                    <asp:HyperLink class="nav-link" ID="homeBtn" runat="server" NavigateUrl="~/Views/Home.aspx">Home</asp:HyperLink>
+                    <asp:HyperLink class="nav-link" ID="orderRamenBtn" runat="server" Visible ="false" NavigateUrl="~/Views/OrderRamen.aspx">Order Ramen</asp:HyperLink>
+                    <asp:HyperLink class="nav-link" ID="manageRamenBtn" runat="server" Visible ="false" NavigateUrl="~/Views/ManageRamen.aspx">Manage Ramen</asp:HyperLink>
+                    <asp:HyperLink class="nav-link" ID="orderQueueBtn" runat="server" Visible ="false" NavigateUrl="~/Views/TransactionQueue.aspx">Order Queue</asp:HyperLink>
+
+                    <asp:HyperLink class="nav-link" ID="historyBtn" runat="server" Visible ="false" NavigateUrl="~/Views/History.aspx">History</asp:HyperLink>
+                    <asp:HyperLink class="nav-link" ID="profileBtn" runat="server" Visible ="false" NavigateUrl="~/Views/Profile.aspx">Profile</asp:HyperLink>
+                    <asp:HyperLink class="nav-link" ID="reportBtn" runat="server" Visible ="false" NavigateUrl="~/Views/Report.aspx">Report</asp:HyperLink>
+                </div>
+                <div class="d-flex">
+                    <asp:Button class="btn btn-outline-success me-2" ID="loginBtn" Text="Log In" runat="server" OnClick="loginBtn_Click" Visible ="true"/>
+                    <asp:Button class="btn btn-success me-2" ID="registerBtn" Text="Register" runat="server" OnClick="registerBtn_Click" Visible ="true"/>
+                    <asp:Button class="btn btn-danger me-2" ID="logoutBtn" Text="Log Out" runat="server" OnClick="logoutBtn_Click1" Visible ="false"/>
+                    
+                </div>
+            </div>
+
+            
+        </nav>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    
+</body>
+</html>
